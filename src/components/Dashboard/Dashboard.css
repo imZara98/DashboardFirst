@@ -1,0 +1,126 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    scroll-behavior: auto;
+}
+
+.component{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+}
+.information{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3,1fr);
+}
+.chart{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3,1fr);
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: grey;
+    height: 480px;
+    width: 720px;
+    border-radius: 20px;
+    margin: 2rem;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.projectDetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.projectDetail h3{
+    color: rgb(51, 51, 51);
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+}
+.projectDetail p{
+    font-size: 1.4rem;
+}
+
+.detailSecondary{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+.detailIcon{
+    font-size: 1.8rem;
+    color: blue;
+    font-weight: 700;
+}
+
+.sectionThird{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.order{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 480px;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.allSections{
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.allSections::-webkit-scrollbar {
+    display: none;
+  }
+
+.setting{
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    bottom: 8%;
+}
+.settingIcon{
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 1.5rem;
+    color: rgb(32, 41, 71);
+    width: 50px;
+    height: 50px;
+    position: sticky;
+    left: 100%;
+    box-shadow: 10px 10px 30px rgba(141, 137, 137, 0.6); 
+}
+
+.mainMenu{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+@media screen and (max-width:1024px) {
+    .mainMenu{
+        display: none; 
+    }
+    .information,.component{
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+    .sectionThird{
+        grid-template-columns: auto;
+    }
+    .order{
+        margin-bottom: 2rem;
+        width: 500px;
+        margin-left: 2rem;
+    }
+}
